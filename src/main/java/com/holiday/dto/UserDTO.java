@@ -14,7 +14,7 @@ public class UserDTO {
 
     private String userName;
 
-    private String userPassword;
+    private String userPassword;    // gives null as output but save password in db
 
     private String userCity;
 }

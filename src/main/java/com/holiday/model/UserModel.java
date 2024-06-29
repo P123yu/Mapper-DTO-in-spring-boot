@@ -21,6 +21,7 @@ public class UserModel {
     @Column(name="user_name")
     private String userName;
 
+    // Sensitive data, not to be exposed
     @Column(name="user_password")
     private String userPassword;
 
