@@ -8,6 +8,7 @@ import java.util.List;
 
 @Repository
 public interface UserRepository extends JpaRepository<UserModel,Integer> {
+
     UserModel findByUserName(String userName);
 
     List<UserModel> findByUserCity(String userCity);

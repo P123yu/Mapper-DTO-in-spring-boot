@@ -10,7 +10,11 @@ import lombok.NoArgsConstructor;
 
 public class UserDTO {
 
+    // validation logic we can write here
+
     private Integer userId;
+
+
 
     private String userName;
 
