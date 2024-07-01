@@ -1,5 +1,4 @@
 package com.holiday.service.impl;
-
 import com.holiday.dto.UserDTO;
 import com.holiday.mapper.UserMapper;
 import com.holiday.model.UserModel;
@@ -7,10 +6,8 @@ import com.holiday.repository.UserRepository;
 import com.holiday.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.stream.Collectors;
-
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -29,10 +26,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserDTO getByCity(String userName) {
-        UserModel user=userRepository.findByUserName(userName);
+    public UserDTO getById(int id) {
+        UserModel user=userRepository.findById(id).orElse(null);
         return userMapper.modelToDto(user);
+
     }
+
 
     @Override
     public List<UserDTO> getAllByCity(String userCity) {
